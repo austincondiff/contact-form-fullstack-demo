@@ -1,0 +1,30 @@
+type Query {
+  feed: [Post!]!
+  drafts: [Post!]!
+  contactEntries: [ContactEntry!]!
+  post(id: ID!): Post
+  contactEntry(id: ID!): ContactEntry
+}
+
+type Mutation {
+  createDraft(title: String!, content: String): Post
+  deletePost(id: ID!): Post
+  createContactEntry(name: String!, email: String!, phone: String!, message: String!): ContactEntry
+  deleteContactEntry(id: ID!): Post
+  publish(id: ID!): Post
+}
+
+type Post {
+  id: ID!
+  published: Boolean!
+  title: String!
+  content: String!
+}
+
+type ContactEntry {
+  id: ID!
+  name: String!
+  phone: String!
+  email: String!
+  message: String!
+}

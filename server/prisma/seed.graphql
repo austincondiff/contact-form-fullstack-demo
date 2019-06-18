@@ -1,0 +1,63 @@
+mutation {
+  post1: createPost(
+    data: {
+      title: "Join us for GraphQL Conf 2019 in Berlin"
+      content: "https://www.graphqlconf.org/"
+      published: true
+    }
+  ) {
+    id
+  }
+
+  post2: createPost(
+    data: {
+      title: "Subscribe to GraphQL Weekly for community news"
+      content: "https://graphqlweekly.com/"
+      published: true
+    }
+  ) {
+    id
+  }
+
+  post3: createPost(
+    data: {
+      title: "Follow Prisma on Twitter"
+      content: "https://twitter.com/prisma"
+    }
+  ) {
+    id
+  }
+
+  contactEntry1: createContactEntry(
+    data: {
+      name: "Tony Stark"
+      phone: "555 555 5555"
+      email: "tony.stark@gmail.com"
+      message: "I told you. I don't want to join your super secret boy band."
+    }
+  ) {
+    id
+  }
+
+  contactEntry2: createContactEntry(
+    data: {
+      name: "Steve Rogers"
+      phone: "555 555 5555"
+      email: "steve.rogers@gmail.com"
+      message: "The price of freedom is high, it always has been. And it's a price I'm willing to pay. And if I'm the only one, then so be it."
+    }
+  ) {
+    id
+  }
+
+  contactEntry3: createContactEntry(
+    data: {
+      name: "Thor Odinson"
+      phone: "555 555 5555"
+      email: "thor.odinson@gmail.com"
+      message: "You people are so petty, and tiny."
+    }
+  ) {
+    id
+  }
+}
